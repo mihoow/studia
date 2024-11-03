@@ -1,21 +1,25 @@
-import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
+import { createRouter, createWebHashHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
+import FractionsPowersRoots from "../views/FractionsPowersRoots.vue";
+import LinearQuadraticFunction from "../views/LinearQuadraticFunction.vue";
+import PolynomialsRationalFunction from "../views/PolynomialsRationalFunction.vue";
+import Trigonometry from "../views/Trigonometry.vue";
+import ExponentialFunction from "../views/ExponentialFunction.vue";
+import LogarithmicFunction from "../views/LogarithmicFunction.vue";
+import Vectors from "../views/Vectors.vue";
 
-const routes: Array<RouteRecordRaw> = [
+const routes = [
+  { path: "/", component: HomeView },
+  { path: "/ulamek-potegi-pierwiastki", component: FractionsPowersRoots },
+  { path: "/funkcja-liniowa-kwadratowa", component: LinearQuadraticFunction },
   {
-    path: "/",
-    name: "home",
-    component: HomeView,
+    path: "/wielomiany-funkcja-wymierna",
+    component: PolynomialsRationalFunction,
   },
-  {
-    path: "/about",
-    name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
-  },
+  { path: "/trygonometria", component: Trigonometry },
+  { path: "/funkcja-wykladnicza", component: ExponentialFunction },
+  { path: "/funkcja-logarytmiczna", component: LogarithmicFunction },
+  { path: "/wektory", component: Vectors },
 ];
 
 const router = createRouter({

@@ -80,8 +80,9 @@
         class="flex items-center justify-center p-4 border-t border-gray-200"
       >
         <a
-          href="https://github.com/your-repo-link"
+          href="https://github.com/mihoow/studia"
           target="_blank"
+          rel="noopener noreferrer"
           class="flex items-center space-x-2 text-gray-700"
         >
           <i class="bi bi-github text-xl"></i>
